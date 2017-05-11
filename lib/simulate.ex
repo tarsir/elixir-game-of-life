@@ -3,6 +3,17 @@ defmodule GameOfLife.Simulate do
     Functions related to simulation and progression of the game state
     """
 
+    @doc """
+    Takes a world state and outputs the next state.
+
+    ## Examples
+
+        iex> GameOfLife.Simulate.simulate([[1,1],[0,1]])
+        [[1,1],[1,1]]
+
+        iex> GameOfLife.Simulate.simulate([[1,0,1],[0,1,0],[1,1,1]])
+        [[0,1,0],[0,0,0],[1,1,1]]
+    """
     def simulate(world) do
         boundaries = 0..(Enum.count(world) - 1)
         for x <- boundaries do

@@ -8,7 +8,7 @@ defmodule GameOfLife.World do
 
     ## Examples
 
-        iex> GameOfLife.World.zeros(10).length
+        iex> GameOfLife.World.generate_random_row(10) |> Enum.count
         10
     """
     def generate_random_row (number) do
@@ -26,7 +26,7 @@ defmodule GameOfLife.World do
 
     ## Examples
 
-        iex> GameOfLife.World.generate_world(4).length
+        iex> GameOfLife.World.generate_world(4) |> Enum.count
         4
 
     """
